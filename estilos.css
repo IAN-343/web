@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: rgb(74, 73, 71);
+    color: rgb(0, 0, 0);
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "header header header"
+                         "contenido contenido asidebar"
+                         "widget-1 widget-2 asidebar"
+                         "footer footer footer ";
+}
+
+
+.contenedor > div,
+.contenedor .header,
+.contenedor .contenido,
+.contenedor .asidebar,
+.contenedor .footer {
+      background:  rgba(136, 121, 121, 0.617);
+      padding: 20px;
+      border-radius: 4px;
+
+}
+
+.contenedor .header {
+    background: rgba(130, 39, 39, 0.617);
+    color: #2df205;
+   /* grid-column-start: 1;
+    grid-column-end: -1;*/
+    grid-area: header;
+    
+
+}
+
+.contenedor .contenido {
+    /*grid-column: span 2;*/
+    grid-area: contenido;
+}
+
+.contenedor .asidebar {
+    grid-column: 3 / 4;
+    background: #fAA43D;
+    text-align: center;
+    /*grid-row: span 2;*/
+    grid-area: asidebar;
+
+}
+
+.contenedor .widget-1,
+.contenedor .widget-2 {
+    background: #55a8fd;
+    color: #fff;
+    height: 100px;
+    text-align: center;
+}
+
+
+.contenedor .widget-1{
+    grid-area: widget-1;
+    height: 440px;
+    width: 300px;
+    
+}
+.contenedor .widget-2{
+    grid-area: widget-2;
+}
+
+
+
+ .contenedor .footer {
+    background: black;
+    color: #ffffff;
+   /* grid-column: span 3; */
+   grid-area: footer;
+ }
+
+
+ @media screen and (max-width: 769px){
+    .contenedor{
+        grid-template-areas: "header header header"
+                             "contenido contenido asidebar"
+                             "widget-1 widget-2 asidebar"
+                             "footer footer footer ";
+    }
+ }
+.video{
+    width: 300px;
+    height: 400px;
+}
+
+
+#indice {
+    background-color: #6e686897;
+    padding: 20px;
+    margin: 20px auto;
+
+    max-width: 300px;
+    border-radius: 8px;
+}
+
+#indice h2, #indice h3 {
+    color: #ffcc00;
+    margin-bottom: 10px;
+}
+
+#indice ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+#indice li {
+    margin-bottom: 8px;
+    color: #f0f0f0;
+}
+
+#indice a {
+    color: #f0f0f0;
+    text-decoration: none;
+}
+
+#indice a:hover {
+    color: #ffcc00;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
